@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ba95oq');
+  src:  url('fonts/icomoon.eot?ba95oq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ba95oq') format('truetype'),
+    url('fonts/icomoon.woff?ba95oq') format('woff'),
+    url('fonts/icomoon.svg?ba95oq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-react:before {
+  content: "\e903";
+}
+.icon-python:before {
+  content: "\e904";
+}
+.icon-photoshop:before {
+  content: "\e905";
+}
+.icon-bootstrap .path1:before {
+  content: "\e900";
+  color: rgb(51, 51, 51);
+}
+.icon-bootstrap .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-csharp:before {
+  content: "\e902";
+}
+.icon-java:before {
+  content: "\e906";
+}
+.icon-javascript:before {
+  content: "\e907";
+}
+.icon-vstudio:before {
+  content: "\e908";
+}
+.icon-wordpress:before {
+  content: "\e909";
+}
+.icon-terminal:before {
+  content: "\ea81";
+}
+.icon-blogger:before {
+  content: "\eab7";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-foursquare:before {
+  content: "\ead6";
+}
+.icon-html-five:before {
+  content: "\eae4";
+}
+.icon-css3:before {
+  content: "\eae6";
+}
