@@ -28,6 +28,13 @@
     height: 100%; width: 100%; object-fit: contain;
   }
 
+  .imgcommonapp {
+    align-content: center;
+    height: 300px;
+    width:100%;
+    object-fit:contain;
+  }
+
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%24f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
@@ -40,6 +47,38 @@
 }
 .carousel-indicators .active {
   background-color: #666662;
+}
+
+/* Custom button */
+
+.btn-sample { 
+  color: #ffffff;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: #347FC5; 
+} 
+
+.btn-sample:hover {
+  color: #347FC5;
+  background-color: #EBEBEB; 
+  border-color: #347FC5;
+  border-width: 2px;
+}
+ 
+#wrapper {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrapper1 {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
   /* SLDR */
