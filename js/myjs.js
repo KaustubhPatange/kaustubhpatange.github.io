@@ -15,14 +15,12 @@ function hidethis1(button) {
   document.getElementById('wrapper').style.display = 'flex';
 }
 
-$('.viewmore1').hover(
-  function() {
-      var $this = $(this); // caching $(this)
-      $this.data('defaultText', $this.text());
-      $this.text("SURE!");
-  },
-  function() {
-      var $this = $(this); // caching $(this)
-      $this.text($this.data('defaultText'));
-  }
-);
+function hidethis2(button) {
+  document.getElementById('wrapper1').style.display = 'none';
+}
+
+function hidethisfinal() {
+  $('#demo1').collapse('toggle');
+  document.getElementById('wrapper').style.display = 'flex';
+  document.getElementById('wrapper1').style.display = 'flex';  
+}
