@@ -12,7 +12,6 @@
     </header>
     {{ .Content }}
     <div class="project">
-      {{ .Paginator.Pages }}
       {{- range .Paginator.Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
