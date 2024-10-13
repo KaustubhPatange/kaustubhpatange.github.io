@@ -1,0 +1,19 @@
+<div class="about-footer">
+    {{ partial "home/avatar.html" . }}
+    <div class="info">
+      <span>AUTHOR</span>
+      <h1>{{ .Site.Params.author }}</h1>
+
+      {{ with .Site.Params.social }}
+        <ul>
+          {{ range first 2 (sort . ".weight") }}
+            <li>
+              <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
+                <i class="{{ .icon }}" aria-hidden="true"></i>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+</div>

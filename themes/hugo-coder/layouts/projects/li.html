@@ -1,0 +1,4 @@
+<div class="list">
+  <a class="title" target="_blank" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}<i class="fa-solid fa-link fa-2xs"></i></a>
+  <span class="description">{{ .Description | safeHTML }}</span>
+</div>

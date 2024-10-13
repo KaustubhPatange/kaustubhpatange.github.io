@@ -1,0 +1,41 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="{{ .Permalink | safeURL }}">
+              {{ .Title }}
+            </a>
+          </h1>
+        </div>
+      </header>
+
+      <div class="post-content">
+        {{ if .Params.featuredImage }}
+          <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+        {{ end }}
+        {{ .Content }}
+      </div>
+
+      <footer>
+        {{ partial "posts/series.html" . }}
+        {{ partial "posts/disqus.html" . }}
+        {{ partial "posts/commento.html" . }}
+        {{ partial "posts/utterances.html" . }}
+        {{ partial "posts/giscus.html" . }}
+        {{ partial "posts/mastodon.html" . }}
+        {{ partial "posts/telegram.html" . }}
+        {{ partial "posts/cusdis.html" . }}
+      </footer>
+    </article>
+
+    {{ partial "posts/math.html" . }}
+
+    {{ partial "about.html" . }}
+  </section>
+{{ end }}
+
