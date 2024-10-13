@@ -1,0 +1,40 @@
+name: dump
+on:
+  push:
+    branches:
+      - master # Set a branch to deploy
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setting up tools
+        run: |
+          sudo apt-get update
+          sudo apt -y install awscli
+
+          export AWS_ACCESS_KEY_ID=${{secrets.AWS_ACCESS_ID}}
+          export AWS_SECRET_ACCESS_KEY=${{secrets.AWS_SECRET_KEY}}
+          export AWS_DEFAULT_REGION=${{secrets.AWS_REGION}}
+          export PEM=${{secrets.AWS_PEM_BASE64}}
+
+          aws configure set aws_access_key_id "$AWS_ACCESS_KEY_ID"
+          aws configure set aws_secret_access_key "$AWS_SECRET_ACCESS_KEY"
+          aws configure set region "$AWS_DEFAULT_REGION"
+          aws configure set output "text"
+
+          DECODED=$(echo $PEM | base64 --decode)
+          echo $DECODED >> __key.pem
+          sed 's/\\n/\n/g' __key.pem >> key.pem
+          chmod 400 key.pem
+
+      - name: Updating remote instance
+        run: |
+          export EC2_IP=${{secrets.AWS_EC2_ELASTIC_IP}}
+          ssh -i key.pem -p 224 -o "StrictHostKeyChecking no" ubuntu@$EC2_IP "cd /www; bash hugo.sh"
