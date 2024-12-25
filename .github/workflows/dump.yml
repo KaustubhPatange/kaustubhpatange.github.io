@@ -37,4 +37,5 @@ jobs:
       - name: Updating remote instance
         run: |
           export EC2_IP=${{secrets.AWS_EC2_ELASTIC_IP}}
-          ssh -i key.pem -p 224 -o "StrictHostKeyChecking no" ubuntu@$EC2_IP "cd /www; bash hugo.sh"
+          export USERNAME=${{secrets.AWS_USERNAME}}
+          ssh -i key.pem -p 224 -o "StrictHostKeyChecking no" $USERNAME@$EC2_IP "cd /www; bash hugo.sh"
