@@ -301,3 +301,30 @@ figure {
   }
 }
 
+kbd {
+   $light-bg: #f7f7f7;
+   $light-border: #ccc;
+   $light-text: #333;
+   $dark-bg: #2d2d2d;
+   $dark-border: #404040;
+   $dark-text: #fff;
+
+   background-color: $light-bg;
+   border: 1px solid $light-border;
+   border-radius: 3px;
+   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+   color: $light-text;
+   display: inline-block;
+   font-size: 0.85em;
+   font-family: monospace;
+   line-height: 1;
+   margin: 0 0.1em;
+   padding: 0.2em 0.4em;
+
+   @media (prefers-color-scheme: dark) {
+       background-color: $dark-bg;
+       border-color: $dark-border;
+       color: $dark-text;
+   }
+}
+
