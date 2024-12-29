@@ -328,3 +328,11 @@ kbd {
    }
 }
 
+.small {
+  font-size: 1.5rem;
+}
+
+.separator {
+  margin: 2rem 0 2rem;
+  border-top: 1px solid $alt-bg-color;
+}

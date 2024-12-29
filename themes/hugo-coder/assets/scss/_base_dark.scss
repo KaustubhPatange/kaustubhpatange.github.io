@@ -89,3 +89,8 @@ body.colorscheme-auto {
     @include base_dark();
   }
 }
+
+.separator {
+  margin: 2rem 0 2rem;
+  border-top: 1px solid $alt-bg-color-dark;
+}
