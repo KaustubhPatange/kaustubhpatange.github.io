@@ -7,5 +7,5 @@ then
 fi
 
 echo "Transpiling..."
-git pull
+git pull --rebase
 hugo --gc --minify --baseURL="https://kaustubhpatange.com/"
