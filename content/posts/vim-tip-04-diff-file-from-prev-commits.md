@@ -14,7 +14,7 @@ However, this is not a straightforward action, as we first need to determine whe
 Vim provides a great diff tool that you can use to compare two files in several ways: 
 
 - Open a file in the buffer, type `:diffthis`, then open another file in a vertical or horizontal split and type `:diffthis` again. To turn if off `:diffoff`.
-- Alternatively, use :vert diffsplit #, where # points to the previous buffer.
+- Alternatively, use `:vert diffsplit #`, where `#` points to the previous buffer.
 
 This works well for local files, but what about comparing with Git versions?
 
