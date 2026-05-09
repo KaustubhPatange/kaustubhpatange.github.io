@@ -7,7 +7,7 @@ type = "about"
 
 Hi I'm Kaustubh,
 
-I'm a Full-Stack Developer with over 3+ years of professional experience specialized in many domains including Mobile Apps, Web, Backend, Gen AI & ML-Ops.
+I'm a Full-Stack Developer with over 4+ years of professional experience specialized in many domains including Web3, Web2, Backend, Android, Gen AI & ML-Ops.
 
 I've a proven track record of building high-quality products satisfying both business as well as user needs, by combining technical expertise with a deep understanding of product development. My focus on scalability, performance, and user experience ensures that solutions are not only robust but also intuitive, driving success for stakeholders and delivering value at every stage.
 
