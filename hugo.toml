@@ -23,7 +23,7 @@ author = "Kaustubh Patange"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Kaustubh Patange's personal website"
 keywords = "blog,developer,personal,project"
-info = ["Full Stack Developer"]
+info = ["Senior SWE", "Crypto wallets, custody &amp; trading infra"]
 avatarURL = "images/avatar.webp"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"
